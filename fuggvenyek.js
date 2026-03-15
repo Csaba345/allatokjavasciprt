@@ -34,17 +34,18 @@ export function rendezesek() {
 }
 
 export function szuresek(lista) {
-    const szuresGombELEMEK=document.querySelectorAll(".szures button")
-    szuresGombELEMEK.forEach(function (button) {
-        button.addEventListener("click",function(event) {
-            console.log(event.target.innerText)
-            let szurt =event.target.innerText
-            const SZURTLISTA=lista.filter(function(a){
-                return a.tipus===szurt
-            })
-            console.log(SZURTLISTA)
-            kartyaMegjelenit(ALLATLISTA)
-        })
-    })
+    const szuroGombok = document.querySelectorAll(".rendezes button");
+    const tipusok = ["emlős", "hal", "madár", "hüllő", "kétéltű"];
+
+    szuroGombok.forEach(gomb => {
+        gomb.addEventListener("click", event => {
+            const szurt = event.target.innerText.toLowerCase();
+            if(tipusok.includes(szurt)) {
+                const szurtLista = lista.filter(a => a.tipus === szurt);
+                kartyaMegjelenit(szurtLista);
+            }
+        });
+    });
 }
 //reduce
+

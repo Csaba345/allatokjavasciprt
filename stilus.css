@@ -34,3 +34,28 @@ header{
     background-color: blue;
     color: white;
 }
+
+article{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+justify-content:center;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    
+}
+@media (min-width: 1024px) {
+    .row .card {
+    flex: 1 1 1 calc(33.333% - 20px); 
+    max-width: calc(33.333% - 20px);
+    color: blue;
+    }   
+}
+
+
+

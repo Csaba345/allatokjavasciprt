@@ -6,3 +6,9 @@ export function kartyaMegjelenit(ALLATLISTA) {
     megjelenit(articleELEM,allat)
     })
 }
+
+export function kartyaMegjelenitLista(lista) {
+    const articleELEM = document.querySelector("article");
+    articleELEM.innerHTML = "";
+    lista.forEach(allat => megjelenit(articleELEM, allat));
+}
