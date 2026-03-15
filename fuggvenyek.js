@@ -1,6 +1,6 @@
 import { kartyaMegjelenit } from "./kartyak.js";
 export function rendezesek() {
-    const buttonELEM = document.querySelector(".rendezes button")
+    const buttonELEM = document.querySelectorAll(".rendezes button")
     buttonELEM.forEach(function(button){
         button.addEventListener("click",function(event){
             console.log(event.target.id);
